@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.eldermoraes.javaee8.jaxrs;
 
 import com.eldermoraes.javaee8.DateTime;
@@ -16,18 +11,24 @@ import javax.ws.rs.GET;
  *
  * @author eldermoraes
  */
+
+//MVC Controller
 @Controller
 @Path("datetime")
 public class DateTimeController {
     
+    //CDI Injection
     @Inject
+    //The "M" of MVC
     Models models;
     
     @Inject
     DateTime dateTime;
     
+    //Request managed by MVC
     @GET
     public String current(){
+        //Pass data to the view
         this.models.put("current", new Current(dateTime.getCurrent()));
         return "/current.jsp";
     }

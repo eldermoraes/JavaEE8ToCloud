@@ -1,5 +1,5 @@
 <%-- 
-    Document   : clock
+    Document   : current
     Created on : Jun 13, 2017, 12:50:46 AM
     Author     : eldermoraes
 --%>
@@ -9,10 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Now</title>
+        <title>Current</title>
     </head>
     <body>
+        <br><br>
         <center>
+            <!-- Model referenced by Expression Language -->
             <h1>${current.now}</h1>
         </center>
     </body>
