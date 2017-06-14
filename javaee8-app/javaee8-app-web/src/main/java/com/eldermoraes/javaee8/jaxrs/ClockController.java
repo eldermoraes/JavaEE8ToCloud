@@ -29,7 +29,7 @@ public class ClockController {
     @GET
     public String current(){
         this.models.put("clock", new Time(watch.getCurrent()));
-        return "/time.jsp";
+        return "/clock.jsp";
     }
     
 }
