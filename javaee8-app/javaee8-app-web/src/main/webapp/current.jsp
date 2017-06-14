@@ -12,6 +12,8 @@
         <title>Now</title>
     </head>
     <body>
-        <h1>${clock.current}</h1>
+        <center>
+            <h1>${current.now}</h1>
+        </center>
     </body>
 </html>

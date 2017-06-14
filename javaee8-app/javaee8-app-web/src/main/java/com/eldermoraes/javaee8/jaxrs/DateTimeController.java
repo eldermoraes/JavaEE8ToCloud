@@ -5,7 +5,7 @@
  */
 package com.eldermoraes.javaee8.jaxrs;
 
-import com.eldermoraes.javaee8.Watch;
+import com.eldermoraes.javaee8.DateTime;
 import javax.inject.Inject;
 import javax.ws.rs.Path;
 import javax.mvc.Controller;
@@ -17,19 +17,19 @@ import javax.ws.rs.GET;
  * @author eldermoraes
  */
 @Controller
-@Path("clock")
-public class ClockController {
+@Path("datetime")
+public class DateTimeController {
     
     @Inject
     Models models;
     
     @Inject
-    Watch watch;
+    DateTime dateTime;
     
     @GET
     public String current(){
-        this.models.put("clock", new Time(watch.getCurrent()));
-        return "/clock.jsp";
+        this.models.put("current", new Current(dateTime.getCurrent()));
+        return "/current.jsp";
     }
     
 }

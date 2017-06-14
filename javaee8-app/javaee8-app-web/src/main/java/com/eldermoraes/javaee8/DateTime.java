@@ -5,7 +5,8 @@
  */
 package com.eldermoraes.javaee8;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import javax.ejb.Stateless;
 
 /**
@@ -13,9 +14,10 @@ import javax.ejb.Stateless;
  * @author eldermoraes
  */
 @Stateless
-public class Watch {
+public class DateTime {
     
     public String getCurrent(){
-        return LocalTime.now().toString();
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        return LocalDateTime.now().format(dtf);
     }
 }

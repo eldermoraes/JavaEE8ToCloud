@@ -9,11 +9,11 @@ package com.eldermoraes.javaee8.jaxrs;
  *
  * @author eldermoraes
  */
-public class Time {
+public class Current {
 
     private String now;
 
-    public Time(String now) {
+    public Current(String now) {
         this.now = now;
     }
 
