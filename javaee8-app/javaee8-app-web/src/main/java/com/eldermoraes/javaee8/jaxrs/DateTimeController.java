@@ -19,7 +19,6 @@ public class DateTimeController {
     
     //CDI Injection
     @Inject
-    //The "M" of MVC
     Models models;
     
     @Inject
