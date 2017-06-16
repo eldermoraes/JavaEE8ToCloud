@@ -11,7 +11,7 @@ RUN curl -o ${INSTALL_DIR}/${GLASSFISH_ARCHIVE}.zip -L http://download.oracle.co
     && rm ${INSTALL_DIR}/${GLASSFISH_ARCHIVE}.zip
 
 ENV GLASSFISH_HOME ${INSTALL_DIR}/${GLASSFISH_ARCHIVE}/glassfish
-ENV DEPLOYMENT_DIR ${GLASSFISH_HOME}/domains/domain1/autodeploy
+ENV DEPLOYMENT_DIR ${GLASSFISH_HOME}/domains/${DOMAIN_NAME}/autodeploy
 
 WORKDIR ${GLASSFISH_HOME}/bin
 
